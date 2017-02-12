@@ -1,27 +1,32 @@
 package ferryTest;
 
+
+import java.util.ArrayList;
 import java.util.Iterator;
 
 
 public class FerryImp implements FerryAB {
 
+	private int TotalVehicles = 0;
+	private int TotalMoney = 0;
+	private int TotalPassengers = 0;
+	private ArrayList<Vehicles> Vehclelist = new ArrayList<Vehicles>();
+	
+	
 	public int countPassengers() {
-		// TODO Auto-generated method stub
-		return 0;
+		return TotalPassengers;
 	}
 
 	public int countVehicleSpace() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (int) TotalVehicles;
 	}
 
 	public int countMoney() {
-		// TODO Auto-generated method stub
-		return 0;
+		return TotalMoney;
 	}
 
 	public Iterator<Vehicles> iterator() {
-		// TODO Auto-generated method stub
+		Vehclelist.iterator();
 		return null;
 	}
 
