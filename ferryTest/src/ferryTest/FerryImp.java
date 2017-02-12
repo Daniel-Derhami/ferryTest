@@ -12,6 +12,8 @@ public class FerryImp implements FerryAB {
 	private int TotalPassengers = 0;
 	private final int VEHSPACE = 40, PASSSPACE = 200;
 	private ArrayList<Vehicles> Vehclelist = new ArrayList<Vehicles>();
+	private ArrayList<Integer> Passengerlist = new ArrayList<Integer>();
+	Passengers pa = new Passengers();
 	
 	
 	public int countPassengers() {
@@ -52,13 +54,20 @@ public class FerryImp implements FerryAB {
 	}
 
 	public void embark(Passengers pas) {
-		// TODO Auto-generated method stub
-		
+		if (hasRoomForPassenger()) {
+			TotalMoney += pa.getPRICE();
+			TotalPassengers += pa.getSPACE();
+			System.out.println("**Passenger embarked ");
+		} else
+			System.out.println("WARNING : No room for more Passengers !!!");
 	}
 
 	public void disembark() {
-		// TODO Auto-generated method stub
-		
+		Vehclelist.clear();
+		Passengerlist.clear();
+		TotalPassengers = 0;
+		TotalVehicles = 0;
+		System.out.println("  Ferry Disembarked  ");
 	}
 
 	public boolean hasSpaceFor(Vehicles ve) {
