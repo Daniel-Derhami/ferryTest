@@ -1,6 +1,5 @@
 package ferryTest;
 
-
 import java.util.Scanner;
 
 public class FerryMain {
@@ -17,15 +16,27 @@ public class FerryMain {
 				while ((num2 = sc.nextInt()) != 0) {
 					switch (num2) {
 					case 1:
+						Bicycles bike=new Bicycles();
+						bike.setPassNumbers(1);
+						TheFerry.embark(bike);
 						break;
 					case 2:
 						Cars car=new Cars();
+						System.out.println("Number of passenger(s) in the Car : ");
+						car.setPassNumbers(sc.nextInt());
+						TheFerry.embark(car);
 						break;
 					case 3:
 						Busses bus=new Busses();
+						System.out.println("Number of passenger(s) in the Bus : ");
+						bus.setPassNumbers(sc.nextInt());
+						TheFerry.embark(bus);
 						break;
 					case 4:
 						Lorry lorry=new Lorry();
+						System.out.println("Number of passenger(s) in the Lorry : ");
+						lorry.setPassNumbers(sc.nextInt());
+						TheFerry.embark(lorry);
 						break;
 					case 0:
 						break;
