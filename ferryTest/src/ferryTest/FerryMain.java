@@ -56,6 +56,10 @@ public class FerryMain {
 				TheFerry.disembark();
 				break;
 			case 4:
+				System.out.println("*************current Statistic**************"+"\n"
+						+"present Passengers : " + TheFerry.countPassengers()+"\n"
+						+"occupied Vehicle Space : " + TheFerry.countVehicleSpace()+"\n"
+						+"treasury cash : "+TheFerry.countMoney()+" SEK");
 				break;
 			case 0:
 				break;
